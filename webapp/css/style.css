@@ -1,0 +1,159 @@
+/*---------------------
+ Text / Common Elements
+-----------------------*/
+
+/* The reason for so many !important is because I have to override a lot of MDB css */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+  color: #fff !important;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 30px;
+}
+
+p {
+	font-size: 18px;
+	color: #808181;
+	line-height: 1.8;
+  margin-bottom: 0 !important;
+
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+	outline: none;
+}
+
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+	outline: none;
+  color: #fff !important;
+  font-weight: 300;
+}
+
+ul,
+ol {
+	padding: 0 !important;
+	margin: 0;
+}
+
+
+/*---------------------
+  Start of Landing
+-----------------------*/
+
+/* Main Landing banner */
+.landing-banner{
+  background: url("/img/Main_Landing.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+/* Copy */
+.landing-copy{
+  position: relative;
+  top: 100px;
+}
+.landing-copy li{
+  list-style: none;
+  color: #fff;
+}
+
+.welcome h2 {
+  font-weight: 100 !important;
+}
+.landing-copy .list-header h2{
+  padding: 0;
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+.sub-header p{
+  color: #CACACA;
+}
+
+/*Nav*/
+.landing-nav-center{
+  position: relative;
+  left: 150px
+}
+
+.test:hover{
+  background-image: url(img/node-tree-nobg.png);
+}
+
+/* Buttons */
+button{
+  margin: auto;
+  border-radius: 10px;
+  padding-left: 70px !important;
+  padding-right: 70px !important;
+}
+
+/* Outlined Button */
+.outline-btn {
+	border: 2px solid #fff;
+	text-align: center;
+  padding-left: 154px;
+	color: #fff;
+	margin: auto;
+  background-color: rgb(0,0,0,0.0);
+}
+
+.outline-btn:focus,
+.outline-btn:hover {
+  background-color: #76C855;
+}
+
+/* Solid  Button */
+.solid-btn {
+	border: 2px solid #fff;
+	text-align: center;
+	color: #76C855;
+  background-color: #fff;
+}
+
+.solid-btn:focus,
+.solid-btn:hover {
+  color: #fff;
+  background-color: #76C855;
+}
+
+/* Misc Elements */
+
+hr {
+  margin-top: 1.25rem !important;
+  border-top: 2px solid white !important;
+}
+
+
+
+/*---------------------
+ End of Landing
+-----------------------*/
+/* Media Queries */
+
+/* Not Part of MVP so will do if we have more time */
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+
+}

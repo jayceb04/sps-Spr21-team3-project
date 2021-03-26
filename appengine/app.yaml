@@ -1,0 +1,3 @@
+runtime: java11
+includes:
+  - /home/aclark/software-product-sprint/portfolio/src/main/env_variables.yaml
