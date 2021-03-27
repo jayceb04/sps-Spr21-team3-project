@@ -1,0 +1,195 @@
+/*---------------------
+ Text / Common Elements
+-----------------------*/
+
+/* The reason for so many !important is because I have to override a lot of MDB css */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+  color: #fff !important;
+}
+
+h2 {
+	font-size: 24px;
+}
+
+h3 {
+	font-size: 30px;
+	color: #000 !important;
+}
+
+p {
+	font-size: 18px;
+	color: #808181;
+	line-height: 1.8;
+  margin-bottom: 0 !important;
+
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+}
+
+
+.landing-banner :is(a,a:hover,a:focus){
+	text-decoration: none;
+  color: #fff !important;
+  font-weight: 300;
+}
+.signin-banner :is(a,a:hover,a:focus){
+	text-decoration: none;
+  color: #76C855 !important;
+  font-weight: 400;
+}
+
+ul,
+ol {
+	padding: 0 !important;
+	margin: 0;
+}
+
+
+/*---------------------
+  Start of Landing
+-----------------------*/
+
+/* Main Landing banner */
+.landing-banner{
+  background: url("/img/Main_Landing.png") no-repeat center center fixed;
+}
+.signin-banner{
+	background: url("/img/signin-bg.png") no-repeat center center fixed;
+}
+.bg{
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.white-bg{
+	background-color: #fff;
+	height: 100vh;
+}
+.gradient{
+	background-image: linear-gradient(rgba(0,0,0,0.0001),rgba(0,0,0,1));
+  position: relative;
+  top: 100px;
+  height: 300px;
+}
+
+/* Copy */
+.landing-copy{
+  position: relative;
+  top: 100px;
+}
+.landing-copy li{
+  list-style: none;
+  color: #fff;
+}
+
+.welcome h2 {
+  font-weight: 100 !important;
+}
+.landing-copy .list-header h2{
+  padding: 0;
+  margin-top: 20px;
+  font-weight: 400;
+}
+
+.sub-header p{
+  color: #CACACA;
+}
+.sub-header h2:hover{
+	color: #CACACA;
+	text-shadow: 0px 3px 2px rgba(150, 150, 150, 1);
+}
+
+form a {
+	color: #000;
+}
+/*Nav*/
+.landing-nav-center{
+  position: relative;
+  left: 150px
+}
+
+/* Buttons */
+.landing-banner button{
+  margin: auto;
+  border-radius: 30px;
+  padding-left: 70px !important;
+  padding-right: 70px !important;
+}
+
+/* Outlined Button */
+.outline-btn {
+	border: 2px solid #fff;
+	text-align: center;
+  padding-left: 154px;
+	color: #fff;
+	margin: auto;
+  background-color: rgb(0,0,0,0.0);
+}
+
+.outline-btn:focus,
+.outline-btn:hover {
+  background-color: #76C855;
+}
+
+/* Solid  Button */
+/* Landing */
+.solid-btn {
+	border: 2px solid #fff;
+	text-align: center;
+	color: #76C855;
+  background-color: #fff;
+}
+
+.solid-btn:focus,
+.solid-btn:hover {
+  color: #fff;
+  background-color: #76C855;
+}
+/* Sign in */
+.green-solid-btn {
+	border: 2px solid #fff;
+	text-align: center;
+	color: #fff;
+  background-color: #76C855;
+	width: 100%;
+}
+
+.green-solid-btn:focus,
+.green-solid-btn:hover {
+  color: #fff;
+  background-color: #5bb139;
+}
+
+/* Misc Elements */
+
+hr {
+  margin-top: 1.25rem !important;
+  border-top: 2px solid white !important;
+}
+
+.form-outline{
+	border-bottom: 1px solid #CACACA;
+}
+
+
+/* Media Queries */
+
+/* Not Part of MVP so will do if we have more time */
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+
+}
