@@ -23,9 +23,10 @@
                 </ul>
                 <ul class="navbar-nav ml-auto mr-5">
                   <li class="nav-item pr-5">
-                   <a class="nav-link" href="/signin.php">Sign In</a></li>
+                   <a class="nav-link" href="/signin">Sign In</a></li>
                    <li class="nav-item">
-                     <button class="nav-link outline-btn btn-rounded" href="#">Sign Up</button>
+                     <a href="/signup"><button class="nav-link outline-btn btn-rounded" >Sign Up</button></a>
+
                  </li>
                </ul>
            </div>
@@ -59,7 +60,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed euismod nisi porta lorem mollis aliquam ut porttitor leo. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend. </p>
                   </div>
                   <div class="mt-4">
-                    <button type="button" class="nav-link solid-btn btn-rounded" href="#">Sign Up</button>
+                    <a href="/signup"><button type="button" class="nav-link solid-btn btn-rounded" href="/signup">Sign Up</button></a>
                   </div>
     						</div>
                   <div class="col-lg-5 offset-3">
