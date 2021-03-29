@@ -103,6 +103,8 @@ function checkPassword(form) {
 }
 // Geez these were a pain in the ass
 
+
+// Google Sign in Auth
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
@@ -111,7 +113,6 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
 
-//This is taken straight from Google's walk-through, please edit it as needed
 function onLoadGoogleCallback(){
   gapi.load('auth2', function() {
     auth2 = gapi.auth2.init({
@@ -119,6 +120,7 @@ function onLoadGoogleCallback(){
       cookiepolicy: 'single_host_origin',
       scope: 'profile'
     });
+
 
   auth2.attachClickHandler(element, {},
     function(googleUser) {
@@ -131,5 +133,8 @@ function onLoadGoogleCallback(){
 
   element = document.getElementById('googleSignIn');
 }
+
+// Google Sign in Auth End
+
 
 </script>
