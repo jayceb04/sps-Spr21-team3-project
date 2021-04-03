@@ -31,17 +31,11 @@ p {
 
 }
 
-input:focus,
-select:focus,
-button:focus,
-textarea:focus {
-}
-
 
 .landing-banner :is(a,a:hover,a:focus){
-	text-decoration: none;
-  color: #fff !important;
-  font-weight: 300;
+    text-decoration: none;
+    color: #fff !important;
+    font-weight: 300;
 }
 .signin-banner :is(a,a:hover,a:focus){
 	text-decoration: none;
@@ -245,5 +239,15 @@ hr {
 
 /* Height for devices larger than 576px */
 @media (min-width: 992px) {
+    .landing-copy{
+        position: relative;
+        top: 60px;
+    }
+}
 
+@media (min-width: 1441px) {
+    .landing-copy{
+        position: relative;
+        top: 100px;
+    }
 }
