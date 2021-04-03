@@ -22,7 +22,7 @@ public class FormServlet extends HttpServlet {
     String college = Jsoup.clean(request.getParameter("college"), Whitelist.none());
     String expectedGrad = Jsoup.clean(request.getParameter("expectedGrad"), Whitelist.none());
     String major = Jsoup.clean(request.getParameter("major"), Whitelist.none());
-  }
+  
  Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("Data");
     FullEntity dataEntity =
@@ -32,9 +32,6 @@ public class FormServlet extends HttpServlet {
             .set("major", major)
             .build();
     datastore.put(dataEntity);
-    // Get the value entered in the form.
-    String college = request.getParameter("college");
-    String expectedGrad = request.getParameter("expectedGrad");
-    String major = request.getParameter("major");
-    
+  }
+
 }
