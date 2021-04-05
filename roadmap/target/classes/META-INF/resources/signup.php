@@ -33,7 +33,7 @@
             <label class="form-label">Confirm Password</label>
           </div>
           <div class="col-8 offset-2 text-center">
-            <a href="/question"><button type="submit" value="Submit" class="nav-link green-solid-btn btn-rounded" href="#">Sign Up</button></a>
+            <a href="#"><button type="submit" value="Submit" class="nav-link green-solid-btn btn-rounded" href="#">Sign Up</button></a>
             <button type="button" class="btn btn-success btn-floating mt-2 mx-auto">
               <i id="googleSignIn" class="fab fa-google"></i>
               <script src="https://apis.google.com/js/platform.js?onload=onLoadGoogleCallback" async defer></script>
@@ -74,7 +74,7 @@ function ValidateEmail(form){
     return (true)
   }
     alert("You have entered an invalid email address!")
-    return (false)
+    return false;
     console.log(email);
 }
 
@@ -100,6 +100,8 @@ function checkPassword(form) {
     alert ("Password did not match: Please try again...")
     return false;
   }
+  return true;
+  
 }
 // Geez these were a pain in the ass
 
