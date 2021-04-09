@@ -1,7 +1,10 @@
+
+
+
 async function GetMessage() {
     const responseFromServer = await fetch('/question-data');
     const textFromResponse = await responseFromServer.text();
-    const messageContainer = document.getElementById('college');
+    const messageContainer = document.getElementById('account-name');
     messageContainer.innerText = textFromResponse;
 
 }
@@ -18,14 +21,15 @@ function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
   console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
   accountID = profile.getId();
-  accountName = profile.getName();
+  window.accountName = profile.getName();
   console.log('Name: ' + profile.getName());
   console.log('Image URL: ' + profile.getImageUrl());
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
+
 function loadUserInfo(googleUser){
     const messageContainer = document.getElementById('account-name');
-    messageContainer.innerText = accountName;
+    messageContainer.innerText = window.accountName;
 }
 function onLoadGoogleCallback(){
   gapi.load('auth2', function() {

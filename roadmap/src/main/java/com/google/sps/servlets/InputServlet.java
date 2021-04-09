@@ -1,4 +1,5 @@
 package com.google.sps.servlets;
+
 import java.io.IOException;
 
 import javax.servlet.annotation.WebServlet;
@@ -13,6 +14,7 @@ import com.google.cloud.datastore.FullEntity;
 import com.google.cloud.datastore.KeyFactory;
 import com.google.cloud.datastore.Query;
 import com.google.cloud.datastore.QueryResults;
+import com.google.cloud.datastore.StructuredQuery.OrderBy;
 
 @WebServlet("/question-data")
 public class InputServlet extends HttpServlet {
@@ -22,18 +24,21 @@ public class InputServlet extends HttpServlet {
 @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response)
       throws IOException {
-    
+              response.setContentType("text/html;");
+
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
 
     Query<Entity> query = Query.newEntityQueryBuilder()
       .setKind("Message")
+      .setOrderBy(OrderBy.desc("timestamp"))
       .build();
     QueryResults<Entity> results = datastore.run(query);
 
     while (results.hasNext()) {
       Entity entity = results.next();
-      String message = entity.getString("text");
+      String message = entity.getString("text");      
       response.getWriter().println(message);
+      break;
     }
   }
   
@@ -41,7 +46,7 @@ public class InputServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
     String text = request.getParameter("message");
-    
+     
     Datastore datastore = DatastoreOptions.getDefaultInstance().getService();
     KeyFactory keyFactory = datastore.newKeyFactory().setKind("Message");
     FullEntity messageEntity = Entity.newBuilder(keyFactory.newKey())

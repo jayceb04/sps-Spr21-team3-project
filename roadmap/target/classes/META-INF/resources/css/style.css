@@ -181,7 +181,7 @@ form a {
   content: '';
   position: absolute;
   width: 2px;
-  background: #006E51;
+  background: #000;
   top: 0;
   bottom: 0;
   left: 50%;
@@ -211,7 +211,7 @@ form a {
   top: calc(50% - 8px);
   right: -8px;
   background: #ffffff;
-  border: 2px solid #006E51;
+  border: 2px solid #000;
   border-radius: 16px;
   z-index: 1;
 }
@@ -227,7 +227,7 @@ form a {
   height: 2px;
   top: calc(50% - 1px);
   right: 8px;
-  background: #006E51;
+  background: rgb(0, 0, 0);
   z-index: 1;
 }
 
@@ -242,7 +242,7 @@ form a {
   text-align: center;
   font-size: 14px;
   font-weight: bold;
-  color: #006E51;
+  color: rgb(0, 0, 0);
   text-transform: uppercase;
   letter-spacing: 1px;
   z-index: 1;
@@ -263,12 +263,12 @@ form a {
   height: 40px;
   padding: 9px 0;
   top: calc(50% - 20px);
-  background: #F6D155;
-  border: 2px solid #006E51;
+  background: #fff;
+  border: 2px solid #000;
   border-radius: 40px;
   text-align: center;
   font-size: 18px;
-  color: #006E51;
+  color: #000;
   z-index: 1;
 }
 
@@ -282,7 +282,7 @@ form a {
 
 .ladder-container .content {
   padding: 30px 90px 30px 30px;
-  background: #F6D155;
+  background: #76C855;
   position: relative;
   border-radius: 0 500px 500px 0;
 }
@@ -296,7 +296,7 @@ form a {
   margin: 0 0 10px 0;
   font-size: 18px;
   font-weight: normal;
-  color: #006E51;
+  color: #000;
 }
 
 .ladder-container .content p {
@@ -329,7 +329,7 @@ form a {
   .ladder-container.left::before,
   .ladder-container.right::before {
     left: 100px;
-    border-color: transparent #006E51 transparent transparent;
+    border-color: transparent #76C855 transparent transparent;
   }
 
   .ladder-container.left .date,
@@ -424,7 +424,9 @@ form a {
   padding-left: 70px !important;
   padding-right: 70px !important;
 }
-
+.checkbox-container .btn{
+    width: 30%;
+}
 /* Outlined Button */
 .outline-btn {
 	border: 2px solid #fff;
@@ -489,7 +491,6 @@ hr {
   margin-top: 1.25rem !important;
   border-top: 2px solid white !important;
 }
-
 
 
 
