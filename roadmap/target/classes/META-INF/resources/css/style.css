@@ -31,11 +31,17 @@ p {
 
 }
 
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+}
+
 
 .landing-banner :is(a,a:hover,a:focus){
-    text-decoration: none;
-    color: #fff !important;
-    font-weight: 300;
+	text-decoration: none;
+  color: #fff !important;
+  font-weight: 300;
 }
 .signin-banner :is(a,a:hover,a:focus){
 	text-decoration: none;
@@ -111,7 +117,7 @@ ol {
 .gradient{
 	background-image: linear-gradient(rgba(0,0,0,0.0001),rgba(0,0,0,1));
   position: relative;
-  top: 100px;
+  top: 135px;
   height: 300px;
 }
 
@@ -147,12 +153,266 @@ ol {
 form a {
 	color: #000;
 }
+
+/*--------------------
+    Ladder Timeline
+----------------------*/
+.ladder-wrapper{
+    background: #fff;
+    height: 100%;
+}
+
+.ladder-wrapper h3{
+    padding: 40px;
+    font-size:40px;
+    font-weight: 400;
+}
+
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #006E51;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.ladder-container {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.ladder-container.left {
+  left: 0;
+}
+
+.ladder-container.right {
+  left: 50%;
+}
+
+.ladder-container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid #006E51;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.ladder-container.right::after {
+  left: -8px;
+}
+
+.ladder-container::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #006E51;
+  z-index: 1;
+}
+
+.ladder-container.right::before {
+  left: 8px;
+}
+
+.ladder-container .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #006E51;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.ladder-container.left .date {
+  right: -75px;
+}
+
+.ladder-container.right .date {
+  left: -75px;
+}
+
+.ladder-container .icon {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 9px 0;
+  top: calc(50% - 20px);
+  background: #F6D155;
+  border: 2px solid #006E51;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: #006E51;
+  z-index: 1;
+}
+
+.ladder-container.left .icon {
+  right: 56px;
+}
+
+.ladder-container.right .icon {
+  left: 56px;
+}
+
+.ladder-container .content {
+  padding: 30px 90px 30px 30px;
+  background: #F6D155;
+  position: relative;
+  border-radius: 0 500px 500px 0;
+}
+
+.ladder-container.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+
+.ladder-container .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: #006E51;
+}
+
+.ladder-container .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@media (max-width: 767.98px) {
+  .timeline::after {
+    left: 90px;
+  }
+
+  .ladder-container {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+
+  .ladder-container.right {
+    left: 0%;
+  }
+
+  .ladder-container.left::after, 
+  .ladder-container.right::after {
+    left: 82px;
+  }
+
+  .ladder-container.left::before,
+  .ladder-container.right::before {
+    left: 100px;
+    border-color: transparent #006E51 transparent transparent;
+  }
+
+  .ladder-container.left .date,
+  .ladder-container.right .date {
+    right: auto;
+    left: 15px;
+  }
+
+  .ladder-container.left .icon,
+  .ladder-container.right .icon {
+    right: auto;
+    left: 146px;
+  }
+
+  .ladder-container.left .content,
+  .ladder-container.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
+}
 /*---------------------
   		Nav
 -----------------------*/
-.landing-nav-center{
+.landing-nav-center {
   position: relative;
   left: 150px
+}
+
+.sidebar {
+	z-index: 0;
+	height: 500px;
+	border-radius: 6px;
+	left: -170px;
+	top: -10px;
+	transition: 0.4s;
+}
+
+.sidebar:hover {
+	left: -10px;
+	filter: drop-shadow(0 0 0.75rem #000); z-index: 999"
+}
+
+.sidebar-copy {
+	position: relative;
+	top: 60px
+}
+
+.sidebar-copy li{
+	list-style: none;
+}
+
+.sidebar-copy h3{
+	padding: 10px;
+}
+
+.sidebar-copy a:hover{
+    text-decoration: none;	
+}
+.sidebar-copy h3::after{
+	content:"✓"
+}
+
+.sidebar-copy :is(h3:hover, h3:focus){
+	text-decoration: none;
+	background: lightgrey;
+}
+/*NEEDS TO BE ADDED: Once a screen is smaller than 1200px, all sidebar contents go to navbar */
+
+
+@media screen and (min-width: 1400px) {
+  .sidebar {
+    left:-170px;
+  }
+}
+@media screen and (min-width: 1500px) {
+	.sidebar {
+    left: -200px;
+  }
+}
+@media screen and (min-width: 1600px) {
+	.sidebar {
+    left: -255px;
+  }
 }
 
 /*---------------------
@@ -239,15 +499,5 @@ hr {
 
 /* Height for devices larger than 576px */
 @media (min-width: 992px) {
-    .landing-copy{
-        position: relative;
-        top: 60px;
-    }
-}
 
-@media (min-width: 1441px) {
-    .landing-copy{
-        position: relative;
-        top: 100px;
-    }
 }
