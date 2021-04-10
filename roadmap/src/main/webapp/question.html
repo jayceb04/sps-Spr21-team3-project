@@ -1,0 +1,95 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>[Insert Name Here]</title>
+    <link href="img/node-tree-nobg.png" rel="shortcut icon"/>
+    <link rel="script" href="/js/script.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="1055777818620-l4sjm83glehidqtf7niespm6qq5rjeig.apps.googleusercontent.com.apps.googleusercontent.com">
+
+  </head>
+<body class="bg question-banner">
+  <div class="mask" style="background-color: rgba(0,0,0,0.6)">
+  <div class="row">
+    <div class="col-12">
+      <div class="col-6 offset-3 white-bg">
+        <div class="col-8 offset-2 d-flex justify-content-center">
+          <div class="mx-auto">
+            <a href="/#"><img src="img/node-tree.svg" width=90 height=90 alt="Node Tree"></a>
+          </div>
+        </div>
+        <form method="POST" class="row g-3 needs-validation" name="signupForm"  action="/question-data" onSubmit="return checkInput(this)" style="position:relative; top:55px;" novalidate>
+          <div class="col-md-8 offset-2">
+            <h3 style="margin-bottom:75px">Welcome, <strong>|*FNAME*|</strong></h3>
+          </div>
+          <div class="form-outline btn-rounded form-floating col-md-8 offset-2">
+            <input type="text" class="form-control" name="message" placeholder="College" required>
+            <label class="form-label">What College Do You Attend?</label>
+          </div>
+          <div class="form-outline btn-rounded form-floating col-md-8 offset-2">
+            <input type="text" class="form-control" name="major" placeholder="major" value="Computer Science" required disabled>
+            <label class="form-label">Major</label>
+          </div>
+          <div class="form-outline btn-rounded form-floating col-md-8 offset-2">
+            <input type="text" class="form-control" name="graduationDate" maxlength="4" placeholder="graduationDate" required>
+            <label class="form-label">Expected Graduation Date</label>
+          </div>
+          <div class="col-8 offset-2 text-center">
+            <button type="submit" value="Submit" class="nav-link green-solid-btn btn-rounded" href="#">Confirm</button>
+          </div>
+        </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+<script type="text/javascript">
+(function () {
+  'use strict'
+  var forms = document.querySelectorAll('.needs-validation')
+
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      window.addEventListener('load', function (event) {
+        //When the page is loaded, it checks to see if there is anything valid in each text box
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+function checkInput(form) {
+  college = form.college.value;
+  graduationDate = form.graduationDate.value;
+  major = form.major.value;
+
+  if(isNaN(graduationDate))
+    alert ("Graduation Date must be numbers")
+  else if (college == '')
+    alert ("Please enter your College");
+
+  else if (password2 == '')
+    alert ("Please enter confirm password");
+
+  else if (password1 != password2) {
+    alert ("Password did not match: Please try again...")
+    return false;
+  }
+}
+
+</script>

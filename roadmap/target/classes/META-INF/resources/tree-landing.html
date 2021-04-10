@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>[Insert Name Here]</title>
+    <link href="img/node-tree-nobg.png" rel="shortcut icon"/>
+    <link rel="script" href="roadmap/src/main/webapp/GetMessage.js">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="1055777818620-l4sjm83glehidqtf7niespm6qq5rjeig.apps.googleusercontent.com.apps.googleusercontent.com">
+  </head>
+<body class="bg question-banner" onload="GetMessage(), loadUserInfo()">
+    <div style="height: 100%; background-color: rgba(0,0,0,0.6)">  <!-- Mask Layer--->
+        <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="filter: drop-shadow(0 0 0.75rem #000); z-index: 999">
+        <div class="container-fluid justify-content-between">
+        <div class="d-flex">
+            <a class="navbar-brand me-2 mb-1 d-flex align-items-center">
+            <img src="img/node-tree-nobg.png" height="50" width="50" alt="" loading="lazy" style="margin-top: 2px;"/>
+            </a>
+        </div>
+        <ul class="navbar-nav flex-row">
+            <li class="nav-item me-3 me-lg-1">
+            <a class="nav-link d-sm-flex align-items-sm-center" href="#">
+                <div class="d-none d-sm-block ms-1 pr-5">
+                <p>Welcome, <strong><p id="account-name"></p></strong></p>
+                </div>     
+            </a>
+            </li>
+            <a href="/" onclick="signOut();">Sign out</a>
+        </ul>
+        </div>
+    </nav>
+    <!-- Navbar -->
+    <div class="row">
+        <div class="col-2 sidebar white-bg">
+            <ul class="pl-3 sidebar-copy">
+                <li>
+                    <a href="#">
+                        <h3 class="btn-rounded">Resources</h3>
+                    </a>
+                </li>
+                <li>
+                <a href="#">
+                    <h3 class="btn-rounded">About</h3>
+                </a>
+            </li>
+            </ul>
+        </div>
+        <div class="col-xl-9 ladder-wrapper">
+            <div class="text-center">
+                <h3>Hello World!</h3>
+            </div>
+            <div class="timeline">
+                    <div class="ladder-container left">
+                        <div class="date">15 Dec</div>
+                        <i class="icon fa fa-home"></i>
+                        <div class="content">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="ladder-container right">
+                        <div class="date">22 Oct</div>
+                        <i class="icon fa fa-gift"></i>
+                        <div class="content">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="ladder-container left">
+                        <div class="date">10 Jul</div>
+                        <i class="icon fa fa-user"></i>
+                        <div class="content">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="ladder-container right">
+                        <div class="date">18 May</div>
+                        <i class="icon fa fa-running"></i>
+                        <div class="content">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="ladder-container left">
+                        <div class="date">10 Feb</div>
+                        <i class="icon fa fa-cog"></i>
+                        <div class="content">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="ladder-container right">
+                        <div class="date">01 Jan</div>
+                        <i class="icon fa fa-certificate"></i>
+                        <div class="content">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="ladder-container left">
+                        <div class="date">10 Feb</div>
+                        <i class="icon fa fa-cog"></i>
+                        <div class="content">
+                        <h2>Lorem ipsum dolor sit amet</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet elit. Aliquam odio dolor, id luctus erat sagittis non. Ut blandit semper pretium.
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+</body>
+<script type="text/javascript" src="script.js"> </script>

@@ -41,7 +41,7 @@ public class ServerMain {
 
     // Start the server! 🚀
     server.start();
-    System.out.println("Server started!");
+    System.out.println("FUCK YEAH!");
 
     // Keep the main thread alive while the server is running.
     server.join();
