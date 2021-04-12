@@ -551,6 +551,18 @@ hr {
     list-style: none;
 }
 
+/* Resources page */
+.resources-container{
+    margin-left: 20%!important;
+    width: 60%!important;
+    height: 100%!important;
+    background-color: white!important;
+    padding: 2vw!important;
+    font-family: 'Lato', sans-serif!important;
+    color: #808181;
+    padding-bottom: 5vw!important;    
+    padding-left: 3vw!important;    
+}
 
 /* Media Queries */
 
