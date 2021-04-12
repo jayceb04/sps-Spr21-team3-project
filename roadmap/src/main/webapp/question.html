@@ -1,18 +1,26 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>[Insert Name Here]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Question-Form</title>
     <link href="img/node-tree-nobg.png" rel="shortcut icon"/>
     <link rel="script" href="/js/script.js">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com
+    /bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xip
+    ma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,
+    700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" 
+    rel="stylesheet"/>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="1055777818620-l4sjm83glehidqtf7niespm6qq5rjeig.apps.googleusercontent.com.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="1055777818620-l4sjm83glehidqtf7niesp
+    m6qq5rjeig.apps.googleusercontent.com.apps.googleusercontent.com">
 
   </head>
 <body class="bg question-banner">
@@ -25,25 +33,69 @@
             <a href="/#"><img src="img/node-tree.svg" width=90 height=90 alt="Node Tree"></a>
           </div>
         </div>
-        <form method="POST" class="row g-3 needs-validation" name="signupForm"  action="/question-data" onSubmit="return checkInput(this)" style="position:relative; top:55px;" novalidate>
+        <form method="POST" class="row g-3 needs-validation" name="signupForm" 
+         action="/question-data" onSubmit="return checkInput(this)" style="position:relative; top:55px;" novalidate>
           <div class="col-md-8 offset-2">
             <h3 style="margin-bottom:75px">Welcome, <strong>|*FNAME*|</strong></h3>
           </div>
-          <div class="form-outline btn-rounded form-floating col-md-8 offset-2">
-            <input type="text" class="form-control" name="message" placeholder="College" required>
+          <div class="form-group col-md-8 offset-2">
             <label class="form-label">What College Do You Attend?</label>
+            <input type="text" class="form-control" name="message" placeholder="College" 
+            required>
           </div>
-          <div class="form-outline btn-rounded form-floating col-md-8 offset-2">
-            <input type="text" class="form-control" name="major" placeholder="major" value="Computer Science" required disabled>
+          <div class="form-group col-md-8 offset-2">
             <label class="form-label">Major</label>
+            <input type="text" class="form-control" name="major" placeholder="major" 
+            value="Computer Science" required> 
           </div>
-          <div class="form-outline btn-rounded form-floating col-md-8 offset-2">
-            <input type="text" class="form-control" name="graduationDate" maxlength="4" placeholder="graduationDate" required>
+          <div class="form-group col-md-8 offset-2">
             <label class="form-label">Expected Graduation Date</label>
+            <input type="text" class="form-control" name="graduationDate" maxlength="4"
+             placeholder="graduationDate" required>
           </div>
-          <div class="col-8 offset-2 text-center">
-            <button type="submit" value="Submit" class="nav-link green-solid-btn btn-rounded" href="#">Confirm</button>
-          </div>
+          <div class="form-group offset-2 mb-5">
+            <label for="exampleFormControlInput1">Have you taken Data Structures?</label>
+            <div class="form-check ml-5">
+               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+               <label class="form-check-label" for="flexCheckDefault">
+                <a href="roadmap.html">Yes</a>
+               </label>
+            </div>
+             <div class="form-check ml-5">
+               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+               <label class="form-check-label" for="flexCheckDefault">
+                <a href="roadmap.html">Yes</a>
+               </label>
+            </div>
+        </div>
+           <div class="row">
+                <div class="col-12 text-center p-3">                
+                    <h3 style="font-size: 30; font-weight: bold;">Favorite Programming Languages?</h3>
+                </div>
+                <div class="col-lg-9 offset-1 checkbox-container d-flex justify-content-around "> <!-- Row 1 of buttons-->
+                    <!-- All IDs are to be written in lowercase! -->
+                    <input type="checkbox" class="btn-check" id="cpp" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="cpp">C++</label>
+                    <input type="checkbox" class="btn-check" id="python" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="python">Python</label>
+                </div>
+                <div class="col-lg-9 offset-1 checkbox-container d-flex justify-content-around p-3"> <!-- Row 2 of buttons-->
+                    <input type="checkbox" class="btn-check" id="c#" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="c#">C#</label>
+                    <input type="checkbox" class="btn-check" id="c" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="c">C</label>
+                </div>
+                <div class="col-lg-9 offset-1 checkbox-container d-flex justify-content-around "> <!-- Row 3 of buttons-->
+                    <input type="checkbox" class="btn-check" id="java" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="java">Java</label>
+                    <input type="checkbox" class="btn-check" id="js" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="js">Javascript</label>
+                </div>
+            </div>
+         <div class="col-8 offset-2 text-center">
+            <button type="submit" value="Submit" class="nav-link green-solid-btn btn-rounded"
+             href="#">Confirm</button>
+          </div>    
         </form>
     </div>
   </div>
