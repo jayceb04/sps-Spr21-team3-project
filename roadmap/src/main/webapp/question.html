@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>[Insert Name Here]</title>
+    <title>Ladder.io</title>
     <link href="img/node-tree-nobg.png" rel="shortcut icon"/>
     <link rel="script" href="/js/script.js">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta name="google-signin-client_id" content="1055777818620-l4sjm83glehidqtf7niespm6qq5rjeig.apps.googleusercontent.com.apps.googleusercontent.com">
-
   </head>
 <body class="bg question-banner">
   <div class="mask" style="background-color: rgba(0,0,0,0.6)">
@@ -25,9 +25,12 @@
             <a href="/#"><img src="img/node-tree.svg" width=90 height=90 alt="Node Tree"></a>
           </div>
         </div>
-        <form method="POST" class="row g-3 needs-validation" name="signupForm"  action="/question-data" onSubmit="return checkInput(this)" style="position:relative; top:55px;" novalidate>
+        <form method="POST" class="row g-3 needs-validation" name="signupForm" action="/tree-landing.html" onSubmit="return checkInput(this)" style="position:relative; top:55px;" novalidate>
           <div class="col-md-8 offset-2">
-            <h3 style="margin-bottom:75px">Welcome, <strong>|*FNAME*|</strong></h3>
+            <h3 style="margin-bottom:75px">Welcome, <span id="fname"></span></h3>
+            <div class="text-center">
+                <h4>Lets get to know you better!</h4>
+            </div>
           </div>
           <div class="form-outline btn-rounded form-floating col-md-8 offset-2">
             <input type="text" class="form-control" name="message" placeholder="College" required>
@@ -42,7 +45,7 @@
             <label class="form-label">Expected Graduation Date</label>
           </div>
           <div class="col-8 offset-2 text-center">
-            <button type="submit" value="Submit" class="nav-link green-solid-btn btn-rounded" href="#">Confirm</button>
+            <button type="submit" value="Submit" id="button" class="nav-link green-solid-btn btn-rounded" href="/tree-landing.html">Confirm</button>
           </div>
         </form>
     </div>
@@ -50,11 +53,7 @@
 </div>
 </body>
 </html>
-
-
-
-
-
+<script type="text/javascript" src="script.js"> </script>
 <script type="text/javascript">
 (function () {
   'use strict'

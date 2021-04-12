@@ -15,7 +15,7 @@ async function GetMessage() {
       console.log('User signed out.');
     });
   }
-  
+
 // Google Sign in Auth
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
@@ -68,10 +68,13 @@ function onLoadGoogleCallback(){
     })
 })()
 
+
+// ** Form Validation ** 
+// Geez these were a pain in the ass
 function ValidateEmail(form){
   var email = form.email.value;
-
   var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
  if(email.match(mailformat)){
     return (true)
   }
@@ -103,4 +106,62 @@ function checkPassword(form) {
     return false;
   }
 }
-// Geez these were a pain in the ass
+
+//Questions + Tree
+
+// NOTE: Any data passed into localStorage is automatacally converted into a string, 
+// hense the 'false' & 'true' . Some of them are strings and some of them are booleans
+// var cppCheck
+// var pythonCheck
+// const saveCBToLocalstorage = () =>{
+//     cppCheck = document.getElementById("cpp").checked;
+//     pythonCheck =document.getElementById("python").checked;
+    
+//     if (cppCheck){
+//         localStorage.setItem('cppStatus', cppCheck);
+//     }
+//     else{localStorage.setItem('cppStatus', 'false');}
+
+//     if (pythonCheck){localStorage.setItem('pythonStatus', pythonCheck);}
+//     else{localStorage.setItem('pythonStatus', 'false');}
+// }
+
+
+
+// if (localStorage.getItem('cppStatus') == 'true'){
+//     document.getElementById("cpp").innerHTML = 'C++';
+// }
+// if (localStorage.getItem('pythonStatus') == 'true'){
+//     document.getElementById("python").innerHTML = 'Python';
+// }
+
+
+// const button = document.querySelector('button');
+
+// button.addEventListener('click',saveCBToLocalstorage);
+
+
+// ** Local Storage ** 
+
+// Storing First Name (test kinda)
+
+var inputFName = document.getElementById("fname");
+var inputLName = document.getElementById("lname");
+var inputEmail = document.getElementById("email");
+var inputPassword = document.getElementById("password");
+
+
+var storedInput = localStorage.getItem('FNameStored');
+document.getElementById("fname").innerHTML = storedInput;
+
+const saveToLocalstorage = () =>{
+    localStorage.setItem('FNameStored', inputFName.value);
+    localStorage.setItem('LNameStored', inputLName.value);
+    localStorage.setItem('EmailStored', inputEmail.value);
+    localStorage.setItem('PasswordStored', inputPassword.value);
+}
+
+const button = document.getElementById('button');
+button.addEventListener('click', saveToLocalstorage);
+
+
