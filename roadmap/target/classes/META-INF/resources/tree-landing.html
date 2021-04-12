@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>[Insert Name Here]</title>
+    <title>Dashboard</title>
     <link href="img/node-tree-nobg.png" rel="shortcut icon"/>
     <link rel="script" href="roadmap/src/main/webapp/GetMessage.js">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -14,12 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta name="google-signin-client_id" content="1055777818620-l4sjm83glehidqtf7niespm6qq5rjeig.apps.googleusercontent.com.apps.googleusercontent.com">
   </head>
 <body class="bg question-banner" onload="GetMessage(), loadUserInfo()">
     <div style="height: 100%; background-color: rgba(0,0,0,0.6)">  <!-- Mask Layer--->
         <!-- Navbar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="filter: drop-shadow(0 0 0.75rem #000); z-index: 999">
+    <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid justify-content-between">
         <div class="d-flex">
             <a class="navbar-brand me-2 mb-1 d-flex align-items-center">
@@ -30,7 +31,7 @@
             <li class="nav-item me-3 me-lg-1">
             <a class="nav-link d-sm-flex align-items-sm-center" href="#">
                 <div class="d-none d-sm-block ms-1 pr-5">
-                <p>Welcome, <strong><p id="account-name"></p></strong></p>
+                <p>Welcome, <strong><p id=""></p></strong></p>
                 </div>     
             </a>
             </li>
@@ -52,13 +53,30 @@
                     <h3 class="btn-rounded">About</h3>
                 </a>
             </li>
-            </ul>
+        </ul>
+        <div class="language-list text-center mx-3">
+            <h5>You know:</h5>
+            <h5 id="cpp"></h5>
+            <h5 id="python"></h5>
+            <h5 id="js"></h5>
+            <h5 id="c#"></h5>
+            <h5 id="c"></h5>
+            <h5 id="go"></h5>
+            <h5 id="java"></h5>
+            <h5 id="swift"></h5>
+            <h5 id="php"></h5>
+            <div class=" text-center">
+                <button type="submit" value="Submit" class="nav-link green-solid-btn btn-success btn-rounded" href="/course-questions.html">Change Selection</button>
+            </div>
         </div>
-        <div class="col-xl-9 ladder-wrapper">
+        </div>
+        <div class="col-xl-9 offset-xl-2 ladder-wrapper">
             <div class="text-center">
+                
                 <h3>Hello World!</h3>
             </div>
             <div class="timeline">
+                
                     <div class="ladder-container left">
                         <div class="date">15 Dec</div>
                         <i class="icon fa fa-home"></i>
@@ -135,4 +153,4 @@
         </div>
 </div>
 </body>
-<script type="text/javascript" src="script.js"> </script>
+<script type="text/javascript" src="ifStatements.js"> </script>

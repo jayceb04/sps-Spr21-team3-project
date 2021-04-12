@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>[Insert Name Here]</title>
     <link href="img/node-tree-nobg.png" rel="shortcut icon"/>
-    <link rel="script" href="/js/script.js">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
@@ -24,14 +23,14 @@
             <a href="/#"><img src="img/node-tree.svg" width=90 height=90 alt="Node Tree"></a>
           </div>
         </div>
-        <form method="POST" name="questionForm" method="POST" action="/question-data" ></form>
+        <form method="POST" name="questionForm" method="POST" action="/tree-landing.html" ></form>
             <div class="row">
                 <div class="col-12 text-center p-3">                
                     <h3 style="font-size: 30; font-weight: bold;">Favorite Programming Languages?</h3>
                 </div>
                 <div class="col-lg-10 offset-1 checkbox-container d-flex justify-content-around "> <!-- Row 1 of buttons-->
                     <!-- All IDs are to be written in lowercase! -->
-                    <input type="checkbox" class="btn-check" id="cpp" autocomplete="off" />
+                    <input type="checkbox" class="btn-check" id="cpp" autocomplete="off"/>
                     <label class="btn btn-success btn-rounded" for="cpp">C++</label>
 
                     <input type="checkbox" class="btn-check" id="python" autocomplete="off" />
@@ -57,8 +56,8 @@
                     <input type="checkbox" class="btn-check" id="swift" autocomplete="off" />
                     <label class="btn btn-success btn-rounded" for="swift">Swift</label>
 
-                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
-                    <label class="btn btn-success btn-rounded" for="btn-check">PHP</label>
+                    <input type="checkbox" class="btn-check" id="php" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="php">PHP</label>
                 </div>
             </div>
                 <div class="row">
@@ -97,7 +96,7 @@
                 </div>
             </div>
             <div class="col-8 offset-2 text-center p-3">
-                <button type="submit" value="Submit" class="nav-link green-solid-btn btn-success btn-rounded" href="/tree-landing.html">Confirm</button>
+                <button type="submit" value="Submit" id="button" class="nav-link green-solid-btn btn-success btn-rounded" href="/tree-landing.html">Confirm</button>
             </div>
         </form>
     </div>
@@ -105,7 +104,4 @@
 </div>
 </body>
 </html>
-<script type="text/javascript">
-
-
-</script>
+<script type="text/javascript" src="ifStatements.js"> </script>
