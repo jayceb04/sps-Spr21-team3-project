@@ -19,63 +19,113 @@
     <meta name="google-signin-client_id" content="1055777818620-l4sjm83glehidqtf7niespm6qq5rjeig.apps.googleusercontent.com.apps.googleusercontent.com">
   </head>
 <body class="bg question-banner">
-  <div class="mask" style="background-color: rgba(0,0,0,0.6)">
+  <div class="mask" style="height: 100%; background-color: rgba(0,0,0,0.6); overflow:scroll">
   <div class="row">
     <div class="col-12">
-      <div class="col-6 offset-3 white-bg">
+      <div class="col-6 offset-3 white-bg" style="height:104%; filter:drop-shadow(0 0 0.75rem #000);">
         <div class="col-8 offset-2 d-flex justify-content-center">
           <div class="mx-auto">
             <a href="/#"><img src="img/node-tree.svg" width=90 height=90 alt="Node Tree"></a>
           </div>
         </div>
-        <form method="POST" action="/data" style="position:relative; top:55px;">
+        <form method="POST" class="row g-3 needs-validation" name="signupForm" action="/tree-landing.html" onSubmit="return checkInput(this)" style="position:relative; top:55px;" novalidate>
           <div class="col-md-8 offset-2">
-            <h3 style="margin-bottom:75px">Welcome, <span id="fname"></span></h3>
-            <div class="text-center">
+            <h3 style="margin-bottom:30px">Welcome, <span id="fname"></span></h3>
+            <hr>
+            <div class="text-center p-2">
                 <h4>Lets get to know you better!</h4>
             </div>
           </div>
-          <div class="form-group col-md-8 offset-2">
+          <div class="form-outline btn-rounded form-floating col-md-8 offset-2">
+            <input type="text" class="form-control" name="college" placeholder="College" required>
             <label class="form-label">What College Do You Attend?</label>
-            <input type="text" class="form-control" name="college" placeholder="College" 
-            required>
           </div>
-          <div class="form-group col-md-8 offset-2">
+          <div class="form-outline btn-rounded form-floating col-md-8 offset-2">
+            <input type="text" class="form-control" name="major" placeholder="major" value="Computer Science" required disabled>
             <label class="form-label">Major</label>
-            <input type="text" class="form-control" name="major" placeholder="major"  required> 
           </div>
-          <div class="form-group col-md-8 offset-2">
+          <div class="form-outline btn-rounded form-floating col-md-8 offset-2">
+            <input type="text" class="form-control" name="graduationDate" maxlength="4" placeholder="graduationDate" required>
             <label class="form-label">Expected Graduation Date</label>
-            <input type="text" class="form-control" name="graduationDate" maxlength="4"
-             placeholder="graduationDate" required>
           </div>
-           <div class="row">
+          <div class="row">
                 <div class="col-12 text-center p-3">                
                     <h3 style="font-size: 30; font-weight: bold;">Favorite Programming Languages?</h3>
                 </div>
-                <div class="col-lg-9 offset-1 checkbox-container d-flex justify-content-around "> <!-- Row 1 of buttons-->
+                <div class="col-lg-10 offset-1 checkbox-container d-flex justify-content-around "> <!-- Row 1 of buttons-->
                     <!-- All IDs are to be written in lowercase! -->
-                    <input type="checkbox" class="btn-check" id="cpp" autocomplete="off" />
+                    <input type="checkbox" class="btn-check" id="cpp" autocomplete="off"/>
                     <label class="btn btn-success btn-rounded" for="cpp">C++</label>
+
                     <input type="checkbox" class="btn-check" id="python" autocomplete="off" />
                     <label class="btn btn-success btn-rounded" for="python">Python</label>
-                </div>
-                <div class="col-lg-9 offset-1 checkbox-container d-flex justify-content-around p-3"> <!-- Row 2 of buttons-->
-                    <input type="checkbox" class="btn-check" id="c#" autocomplete="off" />
-                    <label class="btn btn-success btn-rounded" for="c#">C#</label>
-                    <input type="checkbox" class="btn-check" id="c" autocomplete="off" />
-                    <label class="btn btn-success btn-rounded" for="c">C</label>
-                </div>
-                <div class="col-lg-9 offset-1 checkbox-container d-flex justify-content-around "> <!-- Row 3 of buttons-->
-                    <input type="checkbox" class="btn-check" id="java" autocomplete="off" />
-                    <label class="btn btn-success btn-rounded" for="java">Java</label>
+
                     <input type="checkbox" class="btn-check" id="js" autocomplete="off" />
                     <label class="btn btn-success btn-rounded" for="js">Javascript</label>
                 </div>
+                <div class="col-lg-10 offset-1 checkbox-container d-flex justify-content-around p-3"> <!-- Row 2 of buttons-->
+                    <input type="checkbox" class="btn-check" id="c#" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="c#">C#</label>
+
+                    <input type="checkbox" class="btn-check" id="c" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="c">C</label>
+
+                    <input type="checkbox" class="btn-check" id="go" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="go">GO</label>
+                </div>
+                <div class="col-lg-10 offset-1 checkbox-container d-flex justify-content-around "> <!-- Row 3 of buttons-->
+                    <input type="checkbox" class="btn-check" id="java" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="java">Java</label>
+
+                    <input type="checkbox" class="btn-check" id="swift" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="swift">Swift</label>
+
+                    <input type="checkbox" class="btn-check" id="php" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="php">PHP</label>
+                </div>
+                <div class="row">
+                <div class="col-12 text-center p-3">                
+                    <h3 style="font-size: 30; font-weight: bold;">What Classes Have You Taken So Far?</h3> <!--New Container -->
+                </div>
+                <div class="col-lg-10 offset-1 checkbox-container d-flex justify-content-around"> <!-- Row 1 of buttons-->
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="btn-check">C++</label>
+
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="btn-check">C++</label>
+
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="btn-check">C++</label>
+                </div>
+                <div class="col-lg-10 offset-1 checkbox-container d-flex justify-content-around p-3"> <!-- Row 2 of buttons-->
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="btn-check">C++</label>
+
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="btn-check">C++</label>
+
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="btn-check">C++</label>
+                </div>
+                <div class="col-lg-10 offset-1 checkbox-container d-flex justify-content-around"> <!-- Row 3 of buttons-->
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="btn-check">C++</label>
+
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="btn-check">C++</label>
+
+                    <input type="checkbox" class="btn-check" id="btn-check" autocomplete="off" />
+                    <label class="btn btn-success btn-rounded" for="btn-check">C++</label>
+                </div>
+                <div class="col-8 offset-2 text-center p-3">
+                <button type="submit" value="Submit" id="btn" class="nav-link green-solid-btn btn-success btn-rounded" href="/tree-landing.html">Confirm</button>
             </div>
-         <div class="col-8 offset-2 text-center">
-            <button type="submit" value="Submit" class="nav-link green-solid-btn btn-rounded"
-             href="#">Confirm</button>
+            </div>
+            
+            </div>
+            </div>
+            
+          </div>
           </div>    
         </form>
     </div>
@@ -84,6 +134,7 @@
 </body>
 </html>
 <script type="text/javascript" src="script.js"> </script>
+<script type="text/javascript" src="ifStatements.js"> </script>
 <script type="text/javascript">
 (function () {
   'use strict'

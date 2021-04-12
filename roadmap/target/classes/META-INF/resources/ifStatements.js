@@ -59,6 +59,9 @@ const saveCBToLocalstorage = () =>{
 
 
 //outputting each on tree-landing
+// NOTE: Any data passed into localStorage is automatacally converted into a string, 
+// hense the 'false' & 'true' . Some of them are strings and some of them are booleans
+
 if (localStorage.getItem('cppStatus') == 'true'){document.getElementById("cpp").innerHTML = 'C++';}
 
 if (localStorage.getItem('pythonStatus') == 'true'){document.getElementById("python").innerHTML = 'Python';}
@@ -77,5 +80,8 @@ if (localStorage.getItem('swiftStatus') == 'true'){document.getElementById("swif
 
 if (localStorage.getItem('phpStatus') == 'true'){document.getElementById("php").innerHTML = 'PHP';}
 
-const button = document.getElementById('button');
-button.addEventListener('click',saveCBToLocalstorage);
+const btn = document.getElementById('btn');
+
+if(btn){
+    btn.addEventListener('click',saveCBToLocalstorage);
+}

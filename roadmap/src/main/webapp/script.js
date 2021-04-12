@@ -109,41 +109,6 @@ function checkPassword(form) {
 
 //Questions + Tree
 
-// NOTE: Any data passed into localStorage is automatacally converted into a string, 
-// hense the 'false' & 'true' . Some of them are strings and some of them are booleans
-// var cppCheck
-// var pythonCheck
-// const saveCBToLocalstorage = () =>{
-//     cppCheck = document.getElementById("cpp").checked;
-//     pythonCheck =document.getElementById("python").checked;
-    
-//     if (cppCheck){
-//         localStorage.setItem('cppStatus', cppCheck);
-//     }
-//     else{localStorage.setItem('cppStatus', 'false');}
-
-//     if (pythonCheck){localStorage.setItem('pythonStatus', pythonCheck);}
-//     else{localStorage.setItem('pythonStatus', 'false');}
-// }
-
-
-
-// if (localStorage.getItem('cppStatus') == 'true'){
-//     document.getElementById("cpp").innerHTML = 'C++';
-// }
-// if (localStorage.getItem('pythonStatus') == 'true'){
-//     document.getElementById("python").innerHTML = 'Python';
-// }
-
-
-// const button = document.querySelector('button');
-
-// button.addEventListener('click',saveCBToLocalstorage);
-
-
-// ** Local Storage ** 
-
-// Storing First Name (test kinda)
 
 var inputFName = document.getElementById("fname");
 var inputLName = document.getElementById("lname");
@@ -162,6 +127,10 @@ const saveToLocalstorage = () =>{
 }
 
 const button = document.getElementById('button');
-button.addEventListener('click', saveToLocalstorage);
+if (button){
+    //if the button that we are looking for is on the page, give the ability to call this function. else: ignore
+    //prevents an error from being thrown
+    button.addEventListener('click', saveToLocalstorage);
+}
 
 
