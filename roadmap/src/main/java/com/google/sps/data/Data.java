@@ -4,12 +4,12 @@ package com.google.sps.data;
 public final class Data {
 
   private final String college;
-  private final String expectedGrad;
+  private final String graduationDate;
   private final String major;
 
-  public Data(String college, String expectedGrad, String major) {
+  public Data(String college, String graduationDate, String major) {
     this.college = college;
-    this.expectedGrad = expectedGrad;
+    this.graduationDate = graduationDate;
     this.major = major;
   }
 }
