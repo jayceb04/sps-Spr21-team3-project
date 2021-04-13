@@ -27,10 +27,10 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 }
 
-// function loadUserInfo(googleUser){
-//     const messageContainer = document.getElementById('account-name');
-//     messageContainer.innerText = window.accountName;
-// }
+function loadUserInfo(googleUser){
+    const messageContainer = document.getElementById('account-name');
+    messageContainer.innerText = window.accountName;
+}
 function onLoadGoogleCallback(){
   gapi.load('auth2', function() {
     auth2 = gapi.auth2.init({
